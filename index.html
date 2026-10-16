@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Genesis Interactive — indie game studio</title>
+  <meta name="description" content="Genesis Interactive is an indie game studio building VR/MR games for Meta Quest and AI-driven games for desktop. We open-source our Unity tools: room scanning, on-device talking heads, voice and physics.">
+  <link rel="canonical" href="https://genesisinteractive.in/">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://genesisinteractive.in/">
+  <meta property="og:title" content="Genesis Interactive — indie game studio">
+  <meta property="og:description" content="VR/MR games for Meta Quest and AI-driven games, coming soon. Open-source Unity tools for room scanning, talking heads, voice and physics.">
+  <meta property="og:image" content="https://genesisinteractive.in/assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@genesisin2026">
+  <meta name="theme-color" content="#08080f">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="#top"><img src="assets/logo-mark.webp" alt="" width="36" height="36"> Genesis Interactive</a>
+    <nav>
+      <a href="#games">Games</a>
+      <a href="#open-source">Open source</a>
+      <a href="#demo">Demo</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img class="hero-logo" src="assets/logo-full.webp" alt="Genesis Interactive logo" width="420" height="420">
+      <div class="hero-text">
+        <p class="eyebrow">Indie game studio · India</p>
+        <h1>Immersive games, <span class="grad">built with real-world AI</span>.</h1>
+        <p class="lead">We make VR/MR games for Meta Quest and AI-driven games for desktop, and we open-source the Unity tools we build along the way.</p>
+        <div class="ctas">
+          <a class="btn primary" href="https://github.com/genesisinteractive">⭐ Our open source</a>
+          <a class="btn" href="https://www.youtube.com/@GenesisInteractive2026">▶ YouTube</a>
+          <a class="btn" href="https://x.com/genesisin2026">𝕏 Follow</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="band">
+      <h2>🎮 Games</h2>
+      <div class="games">
+        <div class="card soon">
+          <span class="tag">Coming soon</span>
+          <h3>VR / MR for Meta Quest</h3>
+          <p>Mixed reality that understands your actual room, running fully on the headset.</p>
+        </div>
+        <div class="card soon">
+          <span class="tag">Coming soon</span>
+          <h3>AI-driven games</h3>
+          <p>Characters that see, talk and react, powered by on-device AI. Desktop first.</p>
+        </div>
+      </div>
+      <p class="platforms">Platforms: <b>Meta Quest</b> · <b>Desktop</b></p>
+    </section>
+
+    <section id="open-source" class="band">
+      <h2>🛠️ Open source</h2>
+      <p class="sub">Unity packages we built for our own games, free for yours. Star counts are live from GitHub.</p>
+      <div class="repos">
+        <a class="card repo" href="https://github.com/genesisinteractive/QuestRoomScan" data-repo="QuestRoomScan">
+          <h3>QuestRoomScan <span class="stars"></span></h3>
+          <p>Real-time 3D room reconstruction on Meta Quest 3: GPU TSDF + Surface Nets, passthrough texturing, on-device refinement, Gaussian splat export.</p>
+          <p class="proof">🎢 Used in <b>CoasterMania</b></p>
+        </a>
+        <a class="card repo" href="https://github.com/genesisinteractive/LiveTalk-Unity" data-repo="LiveTalk-Unity">
+          <h3>LiveTalk-Unity <span class="stars"></span></h3>
+          <p>On-device talking heads: LivePortrait + MuseTalk ported to ONNX for Unity (CoreML, CUDA, WebGPU).</p>
+        </a>
+        <a class="card repo" href="https://github.com/genesisinteractive/Qwen3-TTS-Unity" data-repo="Qwen3-TTS-Unity">
+          <h3>Qwen3-TTS-Unity <span class="stars"></span></h3>
+          <p>On-device voice design and voice cloning with Qwen3-TTS via ONNX Runtime, int8 ready.</p>
+        </a>
+        <a class="card repo" href="https://github.com/genesisinteractive/Spark-TTS-Unity" data-repo="Spark-TTS-Unity">
+          <h3>Spark-TTS-Unity <span class="stars"></span></h3>
+          <p>C# port of Spark-TTS with ONNX models for on-device speech in Unity.</p>
+        </a>
+        <a class="card repo" href="https://github.com/genesisinteractive/UnityGaussianSplatting" data-repo="UnityGaussianSplatting">
+          <h3>UnityGaussianSplatting <span class="stars"></span></h3>
+          <p>Our fork with Quest 3 stereo rendering, standalone performance optimizations and runtime PLY loading.</p>
+        </a>
+        <a class="card repo" href="https://github.com/genesisinteractive/synth-core" data-repo="synth-core">
+          <h3>synth <span class="stars"></span></h3>
+          <p>Physics-simulated humanoids from any Unity Humanoid (MuJoCo), with on-device RL training and MR interaction on Quest.</p>
+        </a>
+      </div>
+      <p class="sub more">More: <a href="https://github.com/genesisinteractive/synth-training">synth-training</a> · <a href="https://github.com/genesisinteractive/synth-vr">synth-vr</a> · <a href="https://github.com/genesisinteractive/RoomScan-GaussianSplatServer">RoomScan-GaussianSplatServer</a> · <a href="https://github.com/genesisinteractive/MuJoCo-MLX-Cpp">MuJoCo-MLX-Cpp</a> · <a href="https://github.com/genesisinteractive/Spark-TTS">Spark-TTS (ONNX export)</a></p>
+    </section>
+
+    <section id="demo" class="band">
+      <h2>▶ QuestRoomScan demo</h2>
+      <button class="video" type="button" data-id="_bwo2xWx1fY" aria-label="Play QuestRoomScan demo video">
+        <img src="https://i.ytimg.com/vi/_bwo2xWx1fY/maxresdefault.jpg" alt="QuestRoomScan demo video thumbnail" loading="lazy" width="1280" height="720">
+        <span class="play">▶</span>
+      </button>
+    </section>
+
+    <section id="contact" class="band contact">
+      <h2>✉️ Contact</h2>
+      <p>Collaborations, press or using our tools in your game: <a href="mailto:genesisinteractive2026@gmail.com">genesisinteractive2026@gmail.com</a></p>
+      <div class="ctas">
+        <a class="btn" href="https://x.com/genesisin2026">𝕏 @genesisin2026</a>
+        <a class="btn" href="https://www.youtube.com/@GenesisInteractive2026">▶ @GenesisInteractive2026</a>
+        <a class="btn" href="https://github.com/genesisinteractive">GitHub · genesisinteractive</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Genesis Interactive · India</footer>
+
+  <script>
+    document.querySelectorAll('[data-repo]').forEach(async el => {
+      try {
+        const r = await fetch('https://api.github.com/repos/genesisinteractive/' + el.dataset.repo);
+        if (!r.ok) return;
+        const j = await r.json();
+        el.querySelector('.stars').textContent = '★ ' + j.stargazers_count;
+      } catch (e) {}
+    });
+    document.querySelectorAll('.video').forEach(b => b.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
+      f.title = 'QuestRoomScan demo';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+    }));
+  </script>
+</body>
+</html>
