@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QuestRoomScan - Open source Textured room scanner on Quest3 | Genesis Interactive</title>
+  <meta name="description" content="QuestRoomScan is a free, open-source (MIT) Unity package that scans a real room on Meta Quest 3 into a textured 3D mesh in real time, refines the textures on the headset, and trains Gaussian splats. Used in CoasterMania.">
+  <meta name="keywords" content="Quest 3 room scan, Meta Quest 3 room scanner, textured room scan, 3D room scan Quest, Gaussian splat Quest 3, room scan Unity, TSDF, open source room scanner, QuestRoomScan">
+  <link rel="canonical" href="https://genesisinteractive.in/questroomscan/">
+  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://genesisinteractive.in/questroomscan/">
+  <meta property="og:title" content="QuestRoomScan - Open source Textured room scanner on Quest3">
+  <meta property="og:description" content="Scan your room on Meta Quest 3 into a textured 3D mesh in real time, refine it on the headset, and train Gaussian splats. Free and open source (MIT) for Unity.">
+  <meta property="og:image" content="https://genesisinteractive.in/assets/qrs/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@genesisin2026">
+  <meta name="theme-color" content="#08080f">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .qrs-hero { text-align: left; max-width: 860px; margin: 0 auto; padding: 56px 0 8px; }
+    .qrs-hero h1 { margin-bottom: 8px; }
+    .media { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+    .media figure { margin: 0; }
+    .media video { width: 100%; border-radius: 12px; display: block; background: #000; }
+    .media figcaption { font-size: 14px; opacity: .8; margin-top: 6px; }
+    .feat { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    .feat .card h3 { margin-top: 0; }
+    pre { background: rgba(255,255,255,.06); border-radius: 10px; padding: 14px 16px; overflow-x: auto; font-size: 13px; }
+    .faq h3 { margin-bottom: 4px; }
+    .faq p { margin-top: 0; }
+    @media (max-width: 720px) { .media, .feat { grid-template-columns: 1fr; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareSourceCode",
+    "name": "QuestRoomScan",
+    "alternateName": ["Quest Room Scan", "Quest 3 room scanner"],
+    "description": "Open-source textured room scanner for Meta Quest 3: real-time GPU TSDF meshing, passthrough camera texturing, on-device texture refinement and Gaussian splat training and rendering. Unity 6 URP package.",
+    "codeRepository": "https://github.com/genesisinteractive/QuestRoomScan",
+    "url": "https://genesisinteractive.in/questroomscan/",
+    "programmingLanguage": "C#",
+    "runtimePlatform": "Meta Quest 3 (Unity 6, URP)",
+    "license": "https://opensource.org/licenses/MIT",
+    "isAccessibleForFree": true,
+    "author": { "@type": "Organization", "name": "Genesis Interactive", "url": "https://genesisinteractive.in/" },
+    "video": { "@type": "VideoObject", "name": "QuestRoomScan demo", "embedUrl": "https://www.youtube.com/embed/_bwo2xWx1fY", "thumbnailUrl": "https://i.ytimg.com/vi/_bwo2xWx1fY/maxresdefault.jpg", "uploadDate": "2026-10-16" }
+  }
+  </script>
+</head>
+<body>
+  <div class="glow" aria-hidden="true"></div>
+
+  <header class="nav">
+    <a class="brand" href="/"><img src="/assets/logo-mark.webp" alt="" width="36" height="36"> Genesis Interactive</a>
+    <nav>
+      <a href="#see-it">See it</a>
+      <a href="#features">Features</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="qrs-hero">
+      <p class="eyebrow">Open source · Unity · Meta Quest 3</p>
+      <h1>QuestRoomScan</h1>
+      <p class="lead"><b>Open source textured room scanner on Quest 3.</b> Look around your room and it becomes a textured 3D mesh in real time, right on the headset. Then sharpen every texture from the camera frames and train a Gaussian splat of the same room. Free under the MIT licence.</p>
+      <div class="ctas">
+        <a class="btn primary" href="https://github.com/genesisinteractive/QuestRoomScan" data-repo="QuestRoomScan">⭐ GitHub <span class="stars"></span></a>
+        <a class="btn" href="#demo">▶ Watch the demo</a>
+        <a class="btn" href="#install">Install in Unity</a>
+      </div>
+    </section>
+
+    <section id="see-it" class="band">
+      <h2>See it</h2>
+      <div class="media">
+        <figure><video src="/assets/qrs/tsdf2.mp4" poster="/assets/qrs/tsdf2.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Live scanning: the mesh builds as you look around, coloured from the passthrough cameras.</figcaption></figure>
+        <figure><video src="/assets/qrs/vertex2.mp4" poster="/assets/qrs/vertex2.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Vertex colours: the lightweight fallback layer.</figcaption></figure>
+        <figure><video src="/assets/qrs/refined3.mp4" poster="/assets/qrs/refined3.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Texture refinement on the headset: a sharp UV atlas from the saved camera frames.</figcaption></figure>
+        <figure><video src="/assets/qrs/splat.mp4" poster="/assets/qrs/splat.jpg" autoplay muted loop playsinline preload="metadata"></video><figcaption>Gaussian splat of the same room, rendered on the headset.</figcaption></figure>
+      </div>
+    </section>
+
+    <section id="demo" class="band">
+      <h2>▶ Full walkthrough</h2>
+      <button class="video" type="button" data-id="_bwo2xWx1fY" aria-label="Play the QuestRoomScan demo video">
+        <img src="https://i.ytimg.com/vi/_bwo2xWx1fY/maxresdefault.jpg" alt="QuestRoomScan demo video thumbnail" loading="lazy" width="1280" height="720">
+        <span class="play">▶</span>
+      </button>
+      <p class="sub">Recorded before multi-view blending, GPU sharpening and atlas enhancement were added; today's output is noticeably better.</p>
+    </section>
+
+    <section id="features" class="band">
+      <h2>Features</h2>
+      <div class="feat">
+        <div class="card"><h3>Real-time mesh on the headset</h3><p>Depth frames fuse into a GPU TSDF volume and a Surface Nets mesh, all in compute shaders, while you look around.</p></div>
+        <div class="card"><h3>Textured from the passthrough cameras</h3><p>A world-space triplanar texture cache fills in colour live, with vertex colours as a fallback.</p></div>
+        <div class="card"><h3>Texture refinement</h3><p>Saved keyframes produce a sharper UV-mapped atlas on device, holding 72 fps while it works.</p></div>
+        <div class="card"><h3>Gaussian splats</h3><p>Send the keyframes and point cloud to a training server on your PC or Mac, then view the trained splat on the headset.</p></div>
+        <div class="card"><h3>Scans that come back</h3><p>Each scan is saved as a package with a spatial anchor, so it reloads aligned to your real room in a later session.</p></div>
+        <div class="card"><h3>Your data, your files</h3><p>PLY point cloud, JPEG keyframes, camera poses and the trained splat PLY all stay on your devices.</p></div>
+      </div>
+      <p class="proof">🎢 Used in <a href="https://www.meta.com/en-gb/experiences/coastermania/7856648691073700/"><b>CoasterMania</b></a> on Meta Quest: its Room Scan Update lets you ride your rollercoaster through your actual, textured room.</p>
+    </section>
+
+    <section id="install" class="band">
+      <h2>Install in Unity</h2>
+      <p>Unity 6.2 or newer with URP, and a Meta Quest 3. Add the package to <code>Packages/manifest.json</code>:</p>
+<pre>{
+  "dependencies": {
+    "com.genesis.roomscan": "https://github.com/genesisinteractive/QuestRoomScan.git#v1.3.2"
+  }
+}</pre>
+      <p>Setup, the scan flow, the VR debug menu and the game integration guide are in the <a href="https://github.com/genesisinteractive/QuestRoomScan#readme">README</a>.</p>
+    </section>
+
+    <section id="faq" class="band faq">
+      <h2>FAQ</h2>
+      <h3>Is it free?</h3>
+      <p>Yes. QuestRoomScan is open source under the MIT licence, free for personal and commercial use.</p>
+      <h3>What runs on the headset?</h3>
+      <p>Scanning, meshing, live texturing, texture refinement and splat rendering all run on the Quest 3. Gaussian splat training runs on a companion server on your PC or Mac.</p>
+      <h3>Which headsets does it support?</h3>
+      <p>Meta Quest 3, which has the depth sensor the scanner needs.</p>
+      <h3>Can I use it in my own app or game?</h3>
+      <p>Yes. Please credit <b>QuestRoomScan by Genesis Interactive</b> with a link to <a href="https://github.com/genesisinteractive/QuestRoomScan">the GitHub repo</a>, and ship the MIT licence text inside your app (a licences screen or file), as the licence requires.</p>
+    </section>
+
+    <section id="contact" class="band contact">
+      <h2>✉️ Contact</h2>
+      <p>Integrating QuestRoomScan, press, or a question: <a href="mailto:genesisinteractive2026@gmail.com">genesisinteractive2026@gmail.com</a></p>
+      <div class="ctas">
+        <a class="btn" href="/">Genesis Interactive</a>
+        <a class="btn" href="https://github.com/genesisinteractive">GitHub · genesisinteractive</a>
+        <a class="btn" href="https://www.youtube.com/@GenesisInteractive2026">▶ YouTube</a>
+        <a class="btn" href="https://x.com/genesisin2026">𝕏 @genesisin2026</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Genesis Interactive · India · QuestRoomScan is MIT licensed</footer>
+
+  <script>
+    document.querySelectorAll('[data-repo]').forEach(async el => {
+      try {
+        const r = await fetch('https://api.github.com/repos/genesisinteractive/' + el.dataset.repo);
+        if (!r.ok) return;
+        const j = await r.json();
+        el.querySelector('.stars').textContent = '★ ' + j.stargazers_count;
+      } catch (e) {}
+    });
+    document.querySelectorAll('.video').forEach(b => b.addEventListener('click', () => {
+      const f = document.createElement('iframe');
+      f.src = 'https://www.youtube-nocookie.com/embed/' + b.dataset.id + '?autoplay=1&rel=0';
+      f.title = 'QuestRoomScan demo';
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.allowFullscreen = true;
+      b.replaceWith(f);
+    }));
+  </script>
+</body>
+</html>
